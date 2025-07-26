@@ -30,12 +30,36 @@ const User=mongoose.model("User",userSchema);
 //     console.log(err);
 // });
 
-User.insertMany([{name : "alex",email:"alex@gmail.com",age:21},
-    {name : "ram",email:"ram@gmail.com",age:22},
-    {name : "sam",email:"sam@gmail.com",age:23}]).
-    then((res)=>{
-        console.log(res);
-    }).catch((err)=>{
-        console.log(err);
-    }
-)
+// User.insertMany([{name : "alex",email:"alex@gmail.com",age:21},
+//     {name : "ram",email:"ram@gmail.com",age:22},
+//     {name : "sam",email:"sam@gmail.com",age:23}]).
+//     then((res)=>{
+//         console.log(res);
+//     }).catch((err)=>{
+//         console.log(err);
+//     }
+// )
+
+//use find 
+
+User.find({}).then((res)=>{
+    console.log(res);
+}).catch((err)=>{
+    console.log(err);
+})
+
+//with certain filter or condition
+
+User.find({age:{$gte:34}}).
+then((res)=>{
+    console.log(res);
+}).catch((err)=>{
+    console.log(err);
+})
+
+User.find({age:{$gt:20}}).
+then((res)=>{
+    console.log(res);
+}).catch((err)=>{
+    console.log(err);
+})
