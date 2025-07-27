@@ -42,22 +42,44 @@ const User=mongoose.model("User",userSchema);
 
 //use find 
 
-User.find({}).then((res)=>{
-    console.log(res);
-}).catch((err)=>{
-    console.log(err);
-})
+// User.find({}).then((res)=>{
+//     console.log(res);
+// }).catch((err)=>{
+//     console.log(err);
+// })
 
 //with certain filter or condition
 
-User.find({age:{$gte:34}}).
-then((res)=>{
-    console.log(res);
-}).catch((err)=>{
-    console.log(err);
-})
+// User.find({age:{$gte:34}}).
+// then((res)=>{
+//     console.log(res);
+// }).catch((err)=>{
+//     console.log(err);
+// })
 
-User.find({age:{$gt:20}}).
+// User.find({age:{$gt:20}}).
+// then((res)=>{
+//     console.log(res);
+// }).catch((err)=>{
+//     console.log(err);
+// })
+
+//use updateOne
+// User.updateOne({name:"alex"},{age:89}).
+// then((res)=>{
+//     console.log(res);
+// })
+// .catch((err)=>{
+//     console.log(err);
+// });
+
+// User.upateMany({age:{$gt:15}},{age:45}).then((res)=>{
+//     console.log(res);
+// }).catch((err)=>{
+//     console.log(err);
+// })
+
+User.findByIdAndDelete('6884db45fac9ebbe3d945aa6').
 then((res)=>{
     console.log(res);
 }).catch((err)=>{
