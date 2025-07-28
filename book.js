@@ -48,8 +48,8 @@ const Book=mongoose.model("Book",bookSchema);
 //     console.log(err);
 // })
 
-Book.findByIdAndUpdate('68862932d97a9c7450f1eeb6',{price:1500},{runValidators:true}).then((res)=>{
-    console.log(res);
-}).catch((err)=>{
-    console.log(err);
-})
+// Book.findByIdAndUpdate('68862932d97a9c7450f1eeb6',{price:1500},{runValidators:true}).then((res)=>{
+//     console.log(res);
+// }).catch((err)=>{
+//     console.log(err);
+// })
